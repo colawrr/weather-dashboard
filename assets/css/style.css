@@ -1,0 +1,16 @@
+header {
+    align-items: center;
+    text-align: center;
+    background-color: rgb(54, 61, 155);
+    margin: 15px;
+    padding: 20px;
+    font-size: 30px;
+    color: white;
+}
+
+section {
+    display: flex;
+    width: 30%;
+    height: 100%;
+    border: solid black 3px;
+}
