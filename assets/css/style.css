@@ -1,16 +1,17 @@
-header {
-    align-items: center;
-    text-align: center;
-    background-color: rgb(54, 61, 155);
-    margin: 15px;
-    padding: 20px;
-    font-size: 30px;
-    color: white;
+.navbar-brand {
+    font-size: 38px;
 }
 
-section {
-    display: flex;
-    width: 30%;
-    height: 100%;
-    border: solid black 3px;
+.search-header {
+    font-size: 26px;
+
 }
+
+.city-name {
+    font-size: 30px;
+}
+
+.forecast-date {
+    font-size: 20px;
+}
+

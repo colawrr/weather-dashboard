@@ -4,21 +4,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Weather Dashboard</title>
 </head>
 <body>
-    <header>
-        <h1>Weather Dashboard</h1>
+    <header class="navbar bg-info">
+        <h1 class="navbar-brand h1 text-center w-100 text-white">Weather Dashboard</h1>
     </header>
-    <section>
-        <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt sequi earum maxime excepturi vitae nam assumenda eos eligendi? Fuga, accusamus amet cum eius magnam harum aperiam mollitia deleniti aut unde!
-        </div>
-        <div>
+    <main class="container">
+        <div class="row">
+          <div class="col-4 bg-light">
+           <h3 class="search-header my-3">Search for a City</h3>
+            <div class="input-group mb-2">
+              <input id="city-input" type="text" class="form-control" placeholder="Enter city name" aria-label="Enter city name">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+           </div>
+         </div>
+         <button class="btn btn-secondary mb-3" type="button" id="clear-history">Clear Past Searches</button>
+                <form id="history"></form>
+       </div>
+       <div class="col-8">
+       <div class="row mr-0">
+        <div class="col-12 border border-dark m-3 rounded">
+            <div class="row">
+                <div class="col-12">
+                    <span id="city-name" class="city-name align-middle"></span>
+                    <img id="current-pic" src="placeholder" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                 <p id="temperature"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                 <p id="humidity"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p id="wind-speed"></p>
+                </div>
+              </div>
             
+            <div class="row">
+                <div class="col-12 d-flex">
+                    <p id="UV-index"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+         <section class="row">
+           <div class="col-12">
+             <h2 class="text-center">5 Day Weather Forecast</h2>
+           </div>
+         </section>
+                <div class="row">
+                  <div class="col forecast bg-info text-white ml-3 mb-3 rounded"></div>
+                  <div class="col forecast bg-info text-white ml-3 mb-3 rounded"></div>
+                  <div class="col forecast bg-info text-white ml-3 mb-3 rounded"></div>
+                  <div class="col forecast bg-info text-white ml-3 mb-3 rounded"></div>
+                  <div class="col forecast bg-info text-white ml-3 mb-3 rounded"></div>
+                  <div class="col-12">
+                    <h2 class="text-center m-5">*Bonus* My Local Weather</h2>
+                  </div>
+                  <div id="openweathermap-widget-21" class="col-12 d-flex"></div>
+              </div>
         </div>
-    </section>
+     </div>
+    
+  </main>
+
+  <!--Widget-->
+  <script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script><script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 21,cityid: '5586437',appid: 'c69bc69003846c93e0fb0181c65079e1',units: 'imperial',containerid: 'openweathermap-widget-21',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
